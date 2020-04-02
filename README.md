@@ -29,3 +29,26 @@ borrar con todos los paquetes
 ```sh
 conda remove --name platzi_data --all
 ```
+
+## Fuentes de datos
+
+Se pueden obtener datos de casi cualquier lugar en la web
+
+Paginas de datos finacieros, sitios de noticias, datos de precipitacion, clima, economicos, etc...
+
+de APIs que retornan datos
+
+Redes sociales como Facebook o Twitter
+
+Fuentes de user analytics
+
+Sensores de velocidad, gasolina, temperatura (IOT)
+
+El internet esta plagado de datos desde paginas web de noticias y paginas web en general como datos semiestructurados
+hasta datasets publicos que estan disponibles para ser buscados en servicios como:
+
+- [Goggle Data Search](https://datasetsearch.research.google.com/)
+
+- [Kaggle](https://www.kaggle.com/#)
+
+- [Data.world](https://data.world/search?q=covid+19)
