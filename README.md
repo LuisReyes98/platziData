@@ -52,3 +52,23 @@ hasta datasets publicos que estan disponibles para ser buscados en servicios com
 - [Kaggle](https://www.kaggle.com/#)
 
 - [Data.world](https://data.world/search?q=covid+19)
+
+## ETL
+
+el dia a dia de un ingeniero de datos es:
+
+### Extract
+
+Se obtienen los datos de base de datos sql, archivos csv, data sets publicos, etc.., para obtener la mayor cantidad de datos posibles que sean relevantes con el problema que buscas solucionar
+
+### Transform
+
+Se limpian los datos , se estructuran y enriquecen para poder llevarlos a una **data warehouse**
+
+### Load
+
+Es el tipo de insercion de datos en la dataware house
+
+depende mucho del tipo de solucion que se haya escogido
+
+existen multiples tipos de data warehouse
