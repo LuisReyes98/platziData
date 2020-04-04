@@ -96,6 +96,46 @@ la web posee varios elementos basicos:
 - **CSS**. Presentacion
 
 - **Javascript**, interactividad y computo.
- Es importante de considerar, ya que al accederse de forma programatica a una pagina web si no se ejecuta el javascript es posible que no hay informacion visible, ya que esta carga por medio de la ejecucion del javascript
+ Es importante de considerar, ya que al accederse de forma programatica a una pagina web si no se ejecuta el javascript es posible que no hay informacion visible, ya que esta carga por medio de la ejecucion del javascript, bien por que sea una single page application o pida data por interaccion del usuario con el javascript
 
 - **Json** transferencia de datos por API (importante)
+
+### Web scraping
+
+Utilizando librerias como `beautifulsoup4` se puede analizar la estructura html de un pagina web mediante un sistema de nodos permitiendo estraer informacion de la misma.
+
+Del mismo modo la mayor desventaje es que para encontrar la informacion a buscar se requiere un profundo analisis y lectura del html.
+
+### Page object Pattern
+
+Es un patron de pruebas automatizadas
+
+consiste en esconder los queries especificos que se utilizan para manipular un documento HTML, detras de un objeto que representa la pagina web.
+
+si no se hace esto y se agregan los queries directamente al codigo principal, el codigo es bastante fragil y arreglarlo se vuelve muy dificil.
+
+Ejemplo:
+
+```python
+class WebPage:
+
+  @property
+  def page_header(self):
+    return soup.select('.some-query h1')
+```
+
+### Estructura
+
+declarando las funciones del scraper es mas comodo declarar las funciones que se necesitan primero y luego la implementacion especifica
+
+## Web Scraper
+
+comandos
+
+```sh
+python main.py --help
+```
+
+```sh
+python main.py $news_site
+```
