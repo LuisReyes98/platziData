@@ -139,3 +139,23 @@ python main.py --help
 ```sh
 python main.py $news_site
 ```
+
+## Python syntaxis
+
+Un piso `_variable` es una convencion de clase que da la pista que la variable es interna de en donde se declara mas no cambia la forma en la python la interpreta, esta es una convencion de PEP8.
+
+Dos pisos `__variable` en una clase `MiClase` ocasiona que python la maneje de forma diferente, para evitar que `__variable` sea sobreescrita por una subclase. Al tratar de acceder a ella en una instacia de la clase seria de la siguiente forma `_MiClase__var`
+
+ejemplo:
+
+```python
+class MiClase:
+  def __init__(self):
+    self.__var = 3
+
+example = MiClase()
+
+example._MiClase__var # 3
+```
+
+esto lo hace python de forma automatica para proteger el valor de la variable
