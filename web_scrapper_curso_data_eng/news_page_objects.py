@@ -9,7 +9,9 @@ class NewsPage:
     self.__config = config()['news_sites'][news_site_uid]
     self._queries = self.__config['queries']
     self._html = None
+    self._url = url
     self._visit(url)
+
 
   def _select(self, query_string):
     return self._html.select(query_string)
@@ -20,6 +22,10 @@ class NewsPage:
     response.raise_for_status()
 
     self._html = bs4.BeautifulSoup(response.text, 'html.parser')
+
+  @property
+  def url(self):
+    return self._url
 
 class HomePage(NewsPage):
 
