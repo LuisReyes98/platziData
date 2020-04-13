@@ -159,3 +159,28 @@ example._MiClase__var # 3
 ```
 
 esto lo hace python de forma automatica para proteger el valor de la variable
+
+## Pandas
+
+Es una libreria de python que permite transformar, modificar, leer, editar, buscar y analizar grandes grupos de datos
+
+las formas de datos principales de datos de pandas son
+
+- Series
+
+- Dataframes
+
+Importante saber que pandas es una libreria fuertemente tipada a pesar de que python no sea fuertemente tipado
+
+### Series
+
+las series son similares a una columna de una tabla de una base de datos, posee comportamientos similiares a los de una lista mas no son ni se trabajan como una lista, y todos los datos dentro de una serie deben ser del mismo tipo
+
+poseen una unica dimension
+
+### Dataframes
+
+son en su concepto mas sencillo una tabla donde las columnas y filas tienen etiquetas.
+
+posee un minimo de 2 dimensiones
+
