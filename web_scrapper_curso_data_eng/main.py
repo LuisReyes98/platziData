@@ -4,7 +4,7 @@ import re
 import datetime
 import csv
 
-from requests.exceptions import HTTPError
+from requests.exceptions import HTTPError, ContentDecodingError
 from urllib3.exceptions import MaxRetryError
 
 import news_page_objects as news
@@ -98,7 +98,7 @@ def _fetch_article(news_site_uid, host, link):
 
   try:
     article = news.ArticlePage(news_site_uid, _build_link(host, link))
-  except (HTTPError, MaxRetryError):
+  except (HTTPError, MaxRetryError, ContentDecodingError):
     logger.warning('Error while fetching the article')
 
   if article and not article.body:

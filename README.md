@@ -189,3 +189,7 @@ posee un minimo de 2 dimensiones
 Se conoce como el domado de datos en español.
 
 De las razones por la cual pandas es tan popular es porque posee las funciones del lenguage R para hacer Data wrangling y la disponibilidad de las bibliotecas de python existentes.
+
+en el dia a dia al analizar texto podemos hablar de miles de filas, y al analizar datos de sensores podiramos hablar de millones de filas.
+
+Nunca encontraras un data set 100% limpios
