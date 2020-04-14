@@ -98,8 +98,8 @@ def _fetch_article(news_site_uid, host, link):
 
   try:
     article = news.ArticlePage(news_site_uid, _build_link(host, link))
-  except (HTTPError, MaxRetryError) as e:
-    logger.warning('Error while fetching the article', exec_info="",msg=e)
+  except (HTTPError, MaxRetryError):
+    logger.warning('Error while fetching the article')
 
   if article and not article.body:
     logger.warning('Invalid article. There is no body')
