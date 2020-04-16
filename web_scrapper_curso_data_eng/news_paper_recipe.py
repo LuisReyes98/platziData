@@ -89,4 +89,3 @@ if __name__ == "__main__":
   df = main(args.filename)
 
   print(df)
-  print(df['title'].isna())
