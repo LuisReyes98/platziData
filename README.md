@@ -193,3 +193,23 @@ De las razones por la cual pandas es tan popular es porque posee las funciones d
 en el dia a dia al analizar texto podemos hablar de miles de filas, y al analizar datos de sensores podiramos hablar de millones de filas.
 
 Nunca encontraras un data set 100% limpios
+
+### Datos faltantes
+
+pandas con datos faltantes
+
+```python
+df.isna() # mostar las entradas con datos faltantes
+
+dt.notna() # mostrar todas las entradas que no tengan datos faltantes
+
+df.dropna() # eliminar las entradas con datos faltantes
+```
+
+Reemplzar registros con pandas
+
+```python
+df.fillna() # rellena los faltantes con un valor dado
+
+df.ffill() # rellena los datos faltantes con la ultima entrada valida encontrada
+```
