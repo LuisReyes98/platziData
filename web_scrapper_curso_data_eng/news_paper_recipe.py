@@ -35,9 +35,12 @@ def main(filename):
   df = _fill_missing_title(df)
   df = _generate_uids_for_rows(df)
   df = _remove_new_lines_from_body(df)
+  df = _tokenize_column(df, 'title')
+  df = _tokenize_column(df, 'body')
+  df = _remove_duplicates_entries(df, 'title')
+  df = _drop_rows_with_missing_values(df)
 
-  df = _tokenize_column(df, 'title', 'n_tokens_title')
-  df = _tokenize_column(df, 'body', 'n_tokens_body')
+  _save_data(df,filename)
 
   return df
 
@@ -121,7 +124,14 @@ def _remove_new_lines_from_body(df):
   return df
 
 
-def _tokenize_column(df, column_name, new_column_name):
+def _tokenize_column(df, column_name):
+  """
+    _tokenize_column(df, column_name, new_column_name) -> Dataframe
+    Keyword arguments:
+    df -- Dataframe
+    column_name -- String, name of the column to tokenize
+    new_column_name -- String name of the column that will have the tokenized results
+  """
   tokenize_column = (df
           .dropna()
           .apply(lambda row: nltk.word_tokenize(row[column_name]), axis=1)
@@ -131,9 +141,34 @@ def _tokenize_column(df, column_name, new_column_name):
           .apply(lambda valid_word_list: len(valid_word_list))
           )
 
-  df[new_column_name] = tokenize_column
+  df['n_tokens_'+column_name] = tokenize_column
 
   return df
+
+
+def _remove_duplicates_entries(df, column_name):
+  logger.info('Removing duplicate entries')
+
+  df.drop_duplicates(subset=[column_name], keep='first', inplace=True)
+
+  return df
+
+
+def _drop_rows_with_missing_values(df):
+  logger.info('Dropping rows with missing values')
+  return df.dropna()
+
+
+def _save_data(df,filename):
+  file_path, cleaned_filename = ntpath.split(filename)
+
+  cleaned_filename = 'clean_{}'.format(cleaned_filename)
+  result_path = '{path}/{file_name}'.format(path=file_path, file_name=cleaned_filename)
+  logger.info('Saving data at location: {}'.format(
+      result_path))
+
+  df.to_csv(result_path)
+
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
