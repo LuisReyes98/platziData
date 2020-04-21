@@ -160,6 +160,9 @@ def _drop_rows_with_missing_values(df):
 
 
 def _save_data(df,filename):
+  """
+    Guardar un dataframe como .csv con el filename dado
+  """
   file_path, cleaned_filename = ntpath.split(filename)
 
   cleaned_filename = 'clean_{}'.format(cleaned_filename)
