@@ -213,3 +213,21 @@ df.fillna() # rellena los faltantes con un valor dado
 
 df.ffill() # rellena los datos faltantes con la ultima entrada valida encontrada
 ```
+
+## Sistemas de datos
+
+los sistemas de datos a nivel de estructura existente de todo tipo pero en la forma en que los datos son precesados se mantiene sin importar el sistema y en esto se destacan:
+
+- Procesamiento en bloque: Se procesan datos en bloques de fecha, normalmente se quiere saber que paso en un punto en el tiempo
+
+- Procesamiento en chorro: Suelen ser datos en tiempo real que se procesan en el momento en que llegan y la importancia de los datos viejos es muy baja.
+
+### ¿Como decidir si usa sistemas open source o de terceros?
+
+esto depende del tiempo pues mantener los sistemas open source requiere de mayor especializacion y mantenimiento.
+
+### SQL vs NoSQL
+
+En la ciencia y analisis de datos se usan ambos y los profesionales de datos dominan a fondo ambos entornos de manejo de datos.
+
+Es fundamental dominar SQL y NoSQL

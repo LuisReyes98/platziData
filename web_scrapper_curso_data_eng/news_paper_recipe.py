@@ -156,6 +156,7 @@ def _remove_duplicates_entries(df, column_name):
 
 def _drop_rows_with_missing_values(df):
   logger.info('Dropping rows with missing values')
+
   return df.dropna()
 
 
