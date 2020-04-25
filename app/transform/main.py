@@ -167,7 +167,8 @@ def _save_data(df,filename):
   file_path, cleaned_filename = ntpath.split(filename)
 
   cleaned_filename = 'clean_{}'.format(cleaned_filename)
-  result_path = '{path}/{file_name}'.format(path=file_path, file_name=cleaned_filename)
+  # result_path = '{path}/{file_name}'.format(path=file_path, file_name=cleaned_filename)
+  result_path = './{file_name}'.format(path=file_path, file_name=cleaned_filename)
   logger.info('Saving data at location: {}'.format(
       result_path))
 

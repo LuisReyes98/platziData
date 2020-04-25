@@ -6,3 +6,5 @@ __pycache__/
 web_scrapper_curso_data_eng/files/*.csv
 data_to_sql/*.csv
 data_to_sql/*.db
+
+${workspaceFolder:platziData}/
