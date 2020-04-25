@@ -55,6 +55,7 @@ hasta datasets publicos que estan disponibles para ser buscados en servicios com
 
 ## ETL
 
+**(Extract, Transform, Load)**
 el dia a dia de un ingeniero de datos es:
 
 ### Extract
@@ -218,9 +219,9 @@ df.ffill() # rellena los datos faltantes con la ultima entrada valida encontrada
 
 los sistemas de datos a nivel de estructura existente de todo tipo pero en la forma en que los datos son precesados se mantiene sin importar el sistema y en esto se destacan:
 
-- Procesamiento en bloque: Se procesan datos en bloques de fecha, normalmente se quiere saber que paso en un punto en el tiempo
+- Procesamiento en **bloque**: Se procesan datos en bloques de fecha, normalmente se quiere saber que paso en un punto en el tiempo
 
-- Procesamiento en chorro: Suelen ser datos en tiempo real que se procesan en el momento en que llegan y la importancia de los datos viejos es muy baja.
+- Procesamiento en **chorro**: Suelen ser datos en tiempo real que se procesan en el momento en que llegan y la importancia de los datos viejos es muy baja.
 
 ### ¿Como decidir si usa sistemas open source o de terceros?
 
@@ -231,3 +232,26 @@ esto depende del tiempo pues mantener los sistemas open source requiere de mayor
 En la ciencia y analisis de datos se usan ambos y los profesionales de datos dominan a fondo ambos entornos de manejo de datos.
 
 Es fundamental dominar SQL y NoSQL
+
+## La nube y BigData
+
+la nube da poderes inimaginables para analizar terabytes de datos
+
+**Cuando usar la nuve ?**
+Usarla cuando la cantidad de datos a trabajar es tan grande que no caben en la computadora
+
+o mi pc es incapaz de procesar todos los datos
+
+Si los datos ya estan en la nube (la base de datos esta en un servido) lo optimo es trabajar esos mismos datos en la nube
+
+Google cloud posee diversos sistemas para manejar datos en la nube como:
+
+- Dataflow
+- Pub/Sub
+- Cloud Storage
+- Dataprep
+- Datalab
+- BigQuery
+- Dataproc
+- Firestore
+- etc.
